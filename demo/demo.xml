@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+          <record id="anniv_patrick" model="simple_event.event">
+            <field name="name">Anniversaire de Patrick</field>
+            <field name="description">Vendredi on fête l'anniversaire de Patrick à la salle des fêtes du village.</field>
+          </record>
+          <record id="match_de_foot" model="simple_event.event">
+            <field name="name">Math de foot</field>
+            <field name="description">Dimanche aura lieu le match de foot opposant les deux équipes finalistes.</field>
+          </record>
+    </data>
+</odoo>

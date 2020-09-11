@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="simple_event_event_form">
+      <field name="name">simple_event.event.form</field>
+      <field name="model">simple_event.event</field>
+      <field name="priority" eval="16"/>
+      <field name="arch" type="xml">
+          <form string="Event form">
+            <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="description"/>
+                </group>
+            </sheet>
+          </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="simple_event_event_tree">
+      <field name="name">simple_event.event.tree</field>
+      <field name="model">simple_event.event</field>
+      <field name="priority" eval="16"/>
+      <field name="arch" type="xml">
+          <tree string="Event list">
+            <field name="name"/>
+            <field name="description"/>
+          </tree>
+      </field>
+    </record>
+
+    <!-- action -->
+    <record model="ir.actions.act_window" id="action_list_event">
+        <field name="name">Events</field>
+        <field name="res_model">simple_event.event</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Events 0" id="menu_event_top" groups="base.group_user" />
+    <menuitem name="Events 1" id="menu_event_titre" parent="menu_event_top" groups="base.group_user" />
+    <menuitem name="Events 2" id="menu_event" parent="menu_event_titre" action="action_list_event" groups="base.group_user" />
+  </data>
+</odoo>
